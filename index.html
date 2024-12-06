@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,16 +13,170 @@
         <link rel="stylesheet" href="css/styles.css">
     </head>
 
-    <body>
-        <!-- Conteneur de la barre de navigation -->
-        <div id="idNavBar">
-            <!-- Inclusion du fichier navbar.js pour la barre de navigation -->
-            <script src="js/navbar.js"></script>
+    <body class="style_page">
+        <!-- script pour le curseur -->
             <script>
-                <!-- Appel de la fonction pour créer la barre de navigation -->
-                createNavbar(id_div_navbar = "idNavBar");
+                document.body.style.cursor = 'url(assets/img/cursor.png), auto';
+                document.body.style.userSelect = 'none';
             </script>
-        </div>
+
+        <!-- script pour le management des sections -->
+            <script src="js/manage_sections.js"></script>
+            <script>
+                let sectionText
+                // Vérifier l'ancre lors du chargement de la page
+                window.addEventListener('load', manageSections);
+                // Réagir au changement d'ancre
+                window.addEventListener('hashchange', manageSections);
+            </script>
+
+        <!-- section Header -->
+        <header class = "bg-dark">
+            <!-- section change the langage or change the contrast -->
+            <div id="idHeader">
+                <script src="js/language.js"></script>
+                <script>
+                    let selectedLanguage = "eng";
+                    let activepage = "#homeID";
+
+                    let langage = [
+                        {code: "fr", text: "Français", href : "index.html", logo: "/assets/img/france.png"},
+                        {code : "eng", text: "English", href : "index.html", logo: "/assets/img/united-kingdom.png"},
+                    ]
+                    createHeaderLangage(idHeader = "idHeader", langageArray = langage);
+                </script>
+            </div>
+
+            <nav id="idNavBar">
+                <!-- Inclusion du fichier navbar.js pour la barre de navigation -->
+                <script src="js/navbar.js"></script>
+                <script>
+                    const name = "DE CLERCQ Allan"
+                    const job = {text: {fr: "Data Scientist en santé", eng: "Health Data Scientist"}}
+
+                    const links = [
+                        {text: {fr: 'Accueil', eng: 'Home'}, href: '#homeID', logo: "/assets/img/about.png"},
+                        {text: {fr: 'Expérience', eng: 'Experience'}, href: '#experienceID', logo: "/assets/img/experience.svg"},
+                        {text: {fr: 'Éducation', eng: 'Education'}, href: '#educationID', logo: "/assets/img/education.svg"},
+                        {text: {fr: 'Projets', eng: 'Projects'}, href: '#projectsID', logo: "/assets/img/project.svg"},
+                        {text: {fr: 'Contact', eng: 'Contact'}, href: '#contactID', logo: "/assets/img/contact.svg"},
+                    ];
+
+                    <!-- Appel de la fonction pour créer la barre de navigation -->
+                    createNavbar(idNavbar = "idNavBar", nameParameter = name, jobParameter = job, linksParameter = links);
+                </script>
+            </nav>
+        </header>
+
+        <!-- section Navigation -->
+
+
+        <!-- section Home -->
+        <section id="homeID">
+            <div class="profile-container">
+                <div class="profile-content">
+                    <h1 class="profile-header">
+                        <span>DE CLERCQ Allan</span><br>
+                        <span class="profile-subtitle" data-text="job" >Étudiant</span>
+                    </h1>
+
+                    <div class="intro-text">
+                        <span class="intro-highlight" data-text="welcome-intro">Salut!</span><br>
+                        <span data-text="intro"> Je suis étudiant à l'université de Lille en Data Science appliqué à la santé.</span>
+                    </div>
+                </div>
+
+                <svg width="136" height="4" viewBox="0 0 136 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 2H135.5" stroke="#C5C5C5" stroke-width="3"/>
+                </svg>
+
+
+                <h1 class="profile-header section-title">
+                    Affiliations
+                </h1>
+
+                <div class="affiliation-card">
+                    <div class="card-header">
+                        <div class="card-content">
+                            <h3 class="organization-name" data-text="organization-1">
+                                Université Lille <br>
+                                <span class="detail-text" data-text="organization-1-date">Septembre 2024 - présent</span>
+                            </h3>
+
+                            <div class="details-section">
+                                <div class="detail-label" data-text="organization-location">Localisation</div>
+                                <div class="detail-text" data-text="organization-1-location-content">Lille, France</div>
+
+                                <div class="detail-label" data-text="organization-dep">Département</div>
+                                <div class="detail-text" data-text="organization-1-dep-content">Faculté d'ingénierie et de management de la santé</div>
+
+                                <div class="detail-label" data-text="organization-job">Poste</div>
+                                <div class="detail-text" data-text="organization-1-job-content">Étudiant de Master</div>
+                            </div>
+                        </div>
+
+                        <img class="organization-logo" src="assets/img/lille.png" alt="Université de Lille" />
+
+
+                    </div>
+                    <div class="details-section">
+                        <div class="detail-label">Description</div>
+                        <div class="description-text-description" data-text="organization-1-description">
+                            Master Data Science pour la Santé est le résultat d'une collaboration entre le monde académique et le monde socio-professionnel.
+                            Le Master a reçu le soutien de grandes institutions à l'instar de Bayer Healthcare, Soladis, Florimond-Desprez,
+                            Genes Diffusion ainsi que d'Eurasanté et le Pôle Nutrition Santé Longévité. L'équipe pédagogique est composée d'enseignants,
+                            denseignants-chercheurs de l'Université de Lille (ILIS, Polytech'Lille) et de professionnels des données de santé.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="affiliation-card">
+                    <div class="card-header">
+                        <div class="card-content">
+                            <h3 class="organization-name" data-text="organization-2">
+                                Hospices Civiles de Lyon <br>
+                                <span class="detail-text" data-text="organization-2-date">Mars 2025 - Août 2025</span>
+                            </h3>
+
+                            <div class="details-section">
+                                <div class="detail-label" data-text="organization-location">Localisation</div>
+                                <div class="detail-text" data-text="organization-2-location-content">Lyon, France</div>
+
+                                <div class="detail-label" data-text="organization-dep">Département</div>
+                                <div class="detail-text" data-text="organization-2-dep-content">Centre National de Référence virus des infections respiratoires</div>
+
+                                <div class="detail-label" data-text="organization-job">Poste</div>
+                                <div class="detail-text" data-text="organization-2-job-content">Stagiaire</div>
+                            </div>
+                        </div>
+
+                        <img class="organization-logo" src="assets/img/hcl.png"/>
+
+                    </div>
+                    <div class="details-section">
+                        <div class="detail-label">Description</div>
+                        <div class="description-text-description" data-text="organization-2-description">
+                            Intégration et automatisation du traitement des données provenant du réseau de laboratoires privés RELAB et des réseaux d'hopitaux RENAL,
+                            pour effectuer des analyses prédictives de surveillance les épidémies de virus respiratoires et détection des nouveaux variants à l'échelle
+                            nationale.
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <svg width="136" height="4" viewBox="0 0 136 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 2H135.5" stroke="#C5C5C5" stroke-width="3"/>
+                </svg>
+            </div>
+        </section>
+
+
+
+
+
+
+
 
 
 

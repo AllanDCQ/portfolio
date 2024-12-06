@@ -1,0 +1,42 @@
+{
+  "fr": {
+    "job": "Étudiant",
+    "welcome-intro": "Salut!",
+    "intro": "Je suis étudiant à l'université de Lille en Data Science appliqué à la santé.",
+    "organization-1": "Université Lille",
+    "organization-1-date": "Septembre 2024 - présent",
+    "organization-location": "Localisation",
+    "organization-1-location-content": "Lille, France",
+    "organization-dep": "Département",
+    "organization-1-dep-content": "Faculté d'ingénierie et de management de la santé",
+    "organization-job": "Poste",
+    "organization-1-job-content": "Étudiant de Master",
+    "organization-1-description": "Master Data Science pour la Santé est le résultat d'une collaboration entre le monde académique et le monde socio-professionnel. Le Master a reçu le soutien de grandes institutions à l'instar de Bayer Healthcare, Soladis, Florimond-Desprez, Genes Diffusion ainsi que d'Eurasanté et le Pôle Nutrition Santé Longévité. L'équipe pédagogique est composée d'enseignants, denseignants-chercheurs de l'Université de Lille (ILIS, Polytech'Lille) et de professionnels des données de santé.",
+    "organization-2": "Hospices Civiles de Lyon",
+    "organization-2-date": "Mars 2025 - Août 2025",
+    "organization-2-location-content": "Lyon, France",
+    "organization-2-dep-content": "Centre National de Référence virus des infections respiratoires",
+    "organization-2-job-content": "Stagiaire",
+    "organization-2-description": "Intégration et automatisation du traitement des données provenant du réseau de laboratoires privés RELAB et des réseaux d'hopitaux RENAL, pour effectuer des analyses prédictives de surveillance les épidémies de virus respiratoires et détection des nouveaux variants à l'échelle nationale."
+    },
+  "eng": {
+    "job": "Student",
+    "welcome-intro": "Hi!",
+    "intro": "I am a master's degree student at the University of Lille in Health Data Science",
+    "organization-1": "University of Lille",
+    "organization-1-date": "September 2024 - Present",
+    "organization-location": "Location",
+    "organization-1-location-content": "Lille, France",
+    "organization-dep": "Department",
+    "organization-1-dep-content": "Faculty of Engineering and Health Management",
+    "organization-job": "Position",
+    "organization-1-job-content": "Master's Degree Student",
+    "organization-1-description": "The Master's in Data Science for Health is the result of collaboration between the academic world and the socio-professional sector. The Master's program has received support from major institutions such as Bayer Healthcare, Soladis, Florimond-Desprez, Genes Diffusion, as well as Eurasanté and the Nutrition, Health, and Longevity Cluster. The teaching team is composed of professors, research professors from the University of Lille (ILIS, Polytech'Lille), and professionals in health data.",
+    "organization-2": "Hospices Civils de Lyon",
+    "organization-2-date": "March 2025 - August 2025",
+    "organization-2-location-content": "Lyon, France",
+    "organization-2-dep-content": "National Reference Center for Respiratory Infection Viruses",
+    "organization-2-job-content": "Intern",
+    "organization-2-description": "Integration and automation of data processing from the RELAB private laboratory network and RENAL hospital networks to conduct predictive analyses for monitoring respiratory virus epidemics and detecting new variants at a national level."
+  }
+}
