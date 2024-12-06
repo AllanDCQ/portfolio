@@ -36,7 +36,7 @@
             <div id="idHeader">
                 <script src="js/language.js"></script>
                 <script>
-                    let selectedLanguage = "eng";
+                    let selectedLanguage = "fr";
                     let activepage = "#homeID";
 
                     let langage = [
@@ -95,7 +95,7 @@
                     Affiliations
                 </h1>
 
-                <div class="affiliation-card">
+                <a href="https://ilis.univ-lille.fr/toutes-nos-formations/master-ingenierie-de-la-sante/data-science-sante/page" class="affiliation-card">
                     <div class="card-header">
                         <div class="card-content">
                             <h3 class="organization-name" data-text="organization-1">
@@ -128,9 +128,9 @@
                             denseignants-chercheurs de l'Université de Lille (ILIS, Polytech'Lille) et de professionnels des données de santé.
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="affiliation-card">
+                <a href="https://teamhcl.chu-lyon.fr/cnr-virus-des-infections-respiratoires-grippe-sars-cov-2" class="affiliation-card">
                     <div class="card-header">
                         <div class="card-content">
                             <h3 class="organization-name" data-text="organization-2">
@@ -162,7 +162,7 @@
 
                         </div>
                     </div>
-                </div>
+                </a>
 
 
                 <svg width="136" height="4" viewBox="0 0 136 4" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -177,7 +177,32 @@
 
 
 
+        <!-- Bouton de retour en haut avec un logo PNG -->
+        <button id="scrollToTopBtn" title="Retour en haut">
+            <img src="assets/img/arrow.png" alt="Retour en haut" />
+        </button>
+        <!-- script pour le bouton de retour en haut -->
+        <script>
+            // Obtenez l'élément du bouton
+            let scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
+            // Affiche le bouton quand l'utilisateur descend de 100px de la page
+            window.onscroll = function() {
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    scrollToTopBtn.classList.add("show"); // Affiche le bouton avec un fondu
+                    scrollToTopBtn.classList.remove("hide"); // Assurez-vous que le bouton ne soit pas masqué
+                } else {
+                    scrollToTopBtn.classList.add("hide"); // Cache le bouton avec un fondu
+                    scrollToTopBtn.classList.remove("show"); // Assurez-vous que le bouton ne soit pas visible
+                }
+            };
+
+            // Lorsque le bouton est cliqué, fait défiler la page jusqu'en haut
+            scrollToTopBtn.onclick = function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' }); // Défilement en douceur vers le haut
+            };
+
+        </script>
 
 
         <!-- Optional JavaScript -->

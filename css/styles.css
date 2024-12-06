@@ -112,10 +112,23 @@ header {
     border-radius: 40px;
     background-color: rgba(36, 36, 39, 1);
     width: 90%;
-    max-width: 892px;
+    max-width: clamp(300px, 80%, 1200px);
     padding: clamp(20px, 5vw, 44px);
     margin-bottom: clamp(20px, 5vw, 67px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease; /* Transition pour un effet fluide */
+    transform: translateY(0) translateX(0); /* Position initiale */
+    text-decoration: none; /* Supprime le soulignement du lien */
+    color: inherit; /* Assure que le texte garde sa couleur normale */
 }
+
+
+/* Animation de flottement au survol */
+.affiliation-card:hover {
+    transform: translateY(-20px) translateX(5px); /* Déplacement vers le haut et légèrement à droite */
+    background-color: #535353cc; /* Couleur de fond plus claire */
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4); /* Ombre plus marquée */
+}
+
 
 .card-header {
     display: flex;
@@ -191,3 +204,46 @@ header {
         margin: 10px;
     }
 }
+
+
+
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px; /* Coins légèrement arrondis */
+    padding: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: block; /* Le bouton est caché par défaut */
+    z-index: 1000; /* Pour qu'il soit au-dessus des autres éléments */
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    opacity: 0; /* Le bouton commence invisible */
+    transition: opacity 0.3s ease; /* Transition douce pour fondu */
+    transform: translateY(0); /* Position initiale */
+}
+
+#scrollToTopBtn img {
+    width: 100%; /* L'image occupe toute la taille du bouton */
+    height: 100%; /* L'image occupe toute la taille du bouton */
+    object-fit: contain; /* Pour que l'image s'adapte à l'intérieur du bouton sans déformation */
+}
+
+#scrollToTopBtn:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Ajoute un léger fond sombre au survol */
+    transform: translateY(-5px); /* Déplacement vers le haut et légèrement à droite */
+}
+
+/* Affiche le bouton avec un fondu */
+#scrollToTopBtn.show {
+    opacity: 1; /* Le bouton devient visible avec un fondu */
+}
+
+/* Masquer le bouton avec un fondu */
+#scrollToTopBtn.hide {
+    opacity: 0; /* Le bouton devient invisible avec un fondu */
+}
+
