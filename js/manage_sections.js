@@ -1,3 +1,19 @@
+
+async function fetchJSON() {
+    const currentHash = window.location.hash;
+    console.log(currentHash);
+    const sectionName = currentHash.replace('#', '').replace('ID', '');
+    const jsonUrl = `js/${sectionName}.json`;
+
+    try {
+        const response = await fetch(jsonUrl);
+        sectionText = await response.json();
+        console.log('fin');
+    } catch (error) {
+        console.error("Erreur lors du chargement du fichier JSON : ", error);
+    }
+}
+
 /**
  * [manageSections] Manages the display/hiding of sections based on the anchor in the URL.
  *
@@ -7,44 +23,24 @@
  * // Call the function to manage the display of sections based on the URL anchor
  * manageSections();
  */
-function manageSections() {
-    // Récupérer toutes les sections de la page
-    const sections = document.querySelectorAll('section');
+async function manageSections() {
+    await fetchJSON(); // Attendre la fin de fetchJSON avant de continuer.
 
-    // Masquer toutes les sections par défaut
+    const sections = document.querySelectorAll('section');
     sections.forEach(section => {
         section.style.display = 'none';
     });
 
-    // Récupérer le hash actuel ou définir un hash par défaut
     let currentHash = window.location.hash;
     if (!currentHash) {
         currentHash = '#homeID';
-        history.replaceState(null, null, currentHash); // Met à jour l'URL sans scroll
+        history.replaceState(null, null, currentHash);
     }
 
-    // Afficher la section correspondant au hash
     const currentSection = document.querySelector(currentHash);
     if (currentSection) {
         currentSection.style.display = 'block';
     }
-
-    fetchJSON();
-}
-
-
-function fetchJSON() {
-    const currentHash = window.location.hash;
-    const sectionName = currentHash.replace('#', '').replace('ID', '');
-    const jsonUrl = `js/${sectionName}.json`;
-
-    fetch(jsonUrl)
-        .then((response) => response.json())  // Convertir la réponse en JSON
-        .then((data) => {
-            sectionText = data;
-            console.log(sectionText);
-        })
-        .catch((error) => {
-            console.error("Erreur lors du chargement du fichier JSON : ", error);
-        });
+    console.log(currentHash);
+    setLanguage();
 }

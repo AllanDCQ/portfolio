@@ -15,20 +15,20 @@
 
     <body class="style_page">
         <!-- script pour le curseur -->
-            <script>
-                document.body.style.cursor = 'url(assets/img/cursor.png), auto';
-                document.body.style.userSelect = 'none';
-            </script>
+        <script>
+            document.body.style.cursor = 'url(assets/img/cursor.png), auto';
+            document.body.style.userSelect = 'none';
+        </script>
 
         <!-- script pour le management des sections -->
-            <script src="js/manage_sections.js"></script>
-            <script>
-                let sectionText
-                // Vérifier l'ancre lors du chargement de la page
-                window.addEventListener('load', manageSections);
-                // Réagir au changement d'ancre
-                window.addEventListener('hashchange', manageSections);
-            </script>
+        <script src="js/manage_sections.js"></script>
+        <script>
+            let sectionText
+            // Vérifier l'ancre lors du chargement de la page
+            window.addEventListener('load', manageSections);
+            // Réagir au changement d'ancre
+            window.addEventListener('hashchange', manageSections);
+        </script>
 
         <!-- section Header -->
         <header class = "bg-dark">
@@ -68,9 +68,6 @@
             </nav>
         </header>
 
-        <!-- section Navigation -->
-
-
         <!-- section Home -->
         <section id="homeID">
             <div class="profile-container">
@@ -98,8 +95,8 @@
                 <a href="https://ilis.univ-lille.fr/toutes-nos-formations/master-ingenierie-de-la-sante/data-science-sante/page" class="affiliation-card">
                     <div class="card-header">
                         <div class="card-content">
-                            <h3 class="organization-name" data-text="organization-1">
-                                Université Lille <br>
+                            <h3 class="organization-name">
+                                <span data-text="organization-1">Université Lille</span> <br>
                                 <span class="detail-text" data-text="organization-1-date">Septembre 2024 - présent</span>
                             </h3>
 
@@ -133,8 +130,8 @@
                 <a href="https://teamhcl.chu-lyon.fr/cnr-virus-des-infections-respiratoires-grippe-sars-cov-2" class="affiliation-card">
                     <div class="card-header">
                         <div class="card-content">
-                            <h3 class="organization-name" data-text="organization-2">
-                                Hospices Civiles de Lyon <br>
+                            <h3 class="organization-name">
+                                <span data-text="organization-2">Hospices Civiles de Lyon </span> <br>
                                 <span class="detail-text" data-text="organization-2-date">Mars 2025 - Août 2025</span>
                             </h3>
 
@@ -168,6 +165,339 @@
                 <svg width="136" height="4" viewBox="0 0 136 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 2H135.5" stroke="#C5C5C5" stroke-width="3"/>
                 </svg>
+            </div>
+        </section>
+
+        <!-- section Experience -->
+        <section id="experienceID">
+
+            <h1 class="page-title" data-text="title_exp">
+                Expériences
+            </h1>
+
+            <svg width="136" height="4" viewBox="0 0 136 4" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block; margin: 0 auto;">
+                <path d="M0 2H135.5" stroke="#C5C5C5" stroke-width="3"/>
+            </svg>
+
+            <script>
+                // VARIABLES
+                const elH = document.querySelectorAll(".timeline li > div");
+
+                // START
+                window.addEventListener("load", init);
+
+                function init() {
+                    setEqualHeights(elH);
+                }
+
+                // SET EQUAL HEIGHTS
+                function setEqualHeights(el) {
+                    let counter = 0;
+                    for (let i = 0; i < el.length; i++) {
+                        const singleHeight = el[i].offsetHeight;
+
+                        if (counter < singleHeight) {
+                            counter = singleHeight;
+                        }
+                    }
+
+                    for (let i = 0; i < el.length; i++) {
+                        el[i].style.height = `${counter}px`;
+                    }
+                }
+            </script>
+
+            <div class="timeline">
+                <ol>
+                    <li>
+                        <div>
+                            <h3 class="date-name" data-text="exp_1_date">Mai 2023 -  Juillet 2023</h3>
+                            <h3 data-text="exp_1_title">CNRS - LIRIS</h3>
+                            <p data-text="exp_1_title_desc">Laboratoire d'Informatique en Image et Systèmes d'Information</p>
+                            <h4 data-text="exp_1_job">Stagiaire</h4>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div>
+                            <h3 class="date-name" data-text="exp_2_date">Mars 2025 - Août 2025</h3>
+                            <h3 data-text="exp_2_title">Hospices Civiles de Lyon</h3>
+                            <p data-text="exp_2_title_desc">Centre National de Référence virus des infections respiratoires</p>
+                            <h4 data-text="exp_2_job">Stagiaire</h4>
+                        </div>
+                    </li>
+                    <li></li>
+
+
+
+                </ol>
+
+            </div>
+
+            <div class="profile-container">
+
+                <a href="https://teamhcl.chu-lyon.fr/cnr-virus-des-infections-respiratoires-grippe-sars-cov-2" class="affiliation-card">
+                    <div class="card-header">
+                        <div class="card-content">
+                            <h3 class="organization-name">
+                                <span data-text="exp_2_title">Hospices Civiles de Lyon</span> <br>
+                                <span class="detail-text" data-text="exp_2_date">Mars 2025 - Août 2025</span>
+                            </h3>
+
+                            <div class="details-section">
+                                <div class="detail-label" data-text="exp_localisation_title">Localisation</div>
+                                <div class="detail-text" data-text="exp_2_localisation">Lyon, France</div>
+
+                                <div class="detail-label" data-text="exp_desc_dep">Département</div>
+                                <div class="detail-text" data-text="exp_2_title_desc">Centre National de Référence virus des infections respiratoires</div>
+
+                                <div class="detail-label" data-text="exp_desc_job">Poste</div>
+                                <div class="detail-text" data-text="exp_2_job">Stagiaire</div>
+                            </div>
+                        </div>
+
+                        <img class="organization-logo" src="assets/img/hcl.png"/>
+
+                    </div>
+                    <div class="details-section">
+                        <div class="detail-label">Description</div>
+                        <div class="description-text-description" data-text="exp_2_desc">
+                            Intégration et automatisation du traitement des données provenant du réseau de laboratoires privés RELAB et des réseaux d'hopitaux RENAL,
+                            pour effectuer des analyses prédictives de surveillance les épidémies de virus respiratoires et détection des nouveaux variants à l'échelle
+                            nationale.
+
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://liris.cnrs.fr/en/liris-lab" class="affiliation-card">
+                    <div class="card-header">
+                        <div class="card-content">
+                            <h3 class="organization-name" >
+                                <span data-text="exp_1_title">CNRS - LIRIS</span> <br>
+                                <span class="detail-text" data-text="exp_1_date">Mai 2023 - Juillet 2023</span>
+                            </h3>
+
+                            <div class="details-section">
+                                <div class="detail-label" data-text="exp_localisation_title">Localisation</div>
+                                <div class="detail-text" data-text="exp_1_localisation">Lyon, France</div>
+
+                                <div class="detail-label" data-text="exp_desc_dep">Département</div>
+                                <div class="detail-text" data-text="exp_1_title_desc">Laboratoire d'Informatique en Image et Systèmes d'Information</div>
+
+                                <div class="detail-label" data-text="exp_desc_job">Poste</div>
+                                <div class="detail-text" data-text="exp_1_job">Stagiaire</div>
+                            </div>
+                        </div>
+
+                        <img class="organization-logo" src="assets/img/liris.jpg"/>
+
+                    </div>
+
+                    <div class="details-section">
+                        <div class="detail-label">Description</div>
+                        <div class="description-text-description" data-text="exp_1_desc">
+                            Développement et implémentation de techniques d'apprentissage profond pour la segmentation des tumeurs du sein à partir d'images
+                            automatisées d'échographie 3D. Participation au challenge du MICCAI 2023, axé sur la création de méthodes avancées de traitement
+                            d'images médicales assistées par ordinateur pour améliorer la détection précoce des anomalies mammaires.
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-light mx-auto d-block" style="margin-top: 30px;" onclick="event.stopPropagation(); window.open('http://dx.doi.org/10.13140/RG.2.2.25229.31200', '_blank'); return false;">
+                        Segmentation on Automated 3D Breast Ultrasound (TDSC-2023 dataset) - Internship Report
+                    </button>
+
+                </a>
+
+            </div>
+        </section>
+
+
+        <!-- section Education -->
+        <section id="educationID">
+
+            <h1 class="page-title" data-text="title_edu">
+                Éducation
+            </h1>
+
+            <svg width="136" height="4" viewBox="0 0 136 4" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block; margin: 0 auto;">
+                <path d="M0 2H135.5" stroke="#C5C5C5" stroke-width="3"/>
+            </svg>
+
+            <script>
+                // VARIABLES
+                const elH2 = document.querySelectorAll(".timeline li > div");
+
+                // START
+                window.addEventListener("load", init);
+
+                function init() {
+                    setEqualHeights(elH2);
+                }
+
+                // SET EQUAL HEIGHTS
+                function setEqualHeights(el) {
+                    let counter = 0;
+                    for (let i = 0; i < el.length; i++) {
+                        const singleHeight = el[i].offsetHeight;
+
+                        if (counter < singleHeight) {
+                            counter = singleHeight;
+                        }
+                    }
+
+                    for (let i = 0; i < el.length; i++) {
+                        el[i].style.height = `${counter}px`;
+                    }
+                }
+            </script>
+
+            <div class="timeline">
+                <ol>
+                    <li>
+                        <div>
+                            <h3 class="date-name" data-text="edu_1_date">Septembre 2017 – Juillet 2020</h3>
+                            <h3 data-text="edu_1_title">Lycée Lamartine</h3>
+                            <p data-text="edu_1_title_desc">BAC STI2D: Systèmes d'Information Numérique</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3 class="date-name" data-text="edu_2_date">Septembre 2020 – Juin 2021</h3>
+                            <h3 data-text="edu_2_title">Université Lumière Lyon 2</h3>
+                            <p data-text="edu_2_title_desc">Licence 1 Mathématiques et Informatique 1: Appliquées à l’Économie et la Sociologie</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div>
+                            <h3 class="date-name" data-text="edu_3_date">Septembre 2021 – Juin 2023</h3>
+                            <h3 data-text="edu_3_title">Université Claude Bernard Lyon 1 </h3>
+                            <p data-text="edu_3_title_desc">Licence 2-3 Informatique : Option Analyse de données </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div>
+                            <h3 class="date-name" data-text="edu_4_date">Septembre 2023 – Août 2024</h3>
+                            <h3 data-text="edu_4_title">Londres</h3>
+                            <p data-text="edu_4_title_desc">Année de césure | Projet linguistique </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div>
+                            <h3 class="date-name" data-text="edu_5_date">Septembre 2024 – Août 2026</h3>
+                            <h3 data-text="edu_5_title">Université Lille</h3>
+                            <p data-text="edu_5_title_desc">Master Data Science en Santé</p>
+                        </div>
+                    </li>
+
+                    <li></li>
+
+
+
+                </ol>
+
+            </div>
+
+            <div class="profile-container">
+
+                <a href="https://ilis.univ-lille.fr/toutes-nos-formations/master-ingenierie-de-la-sante/data-science-sante/page" class="affiliation-card">
+                    <div class="card-header">
+                        <div class="card-content">
+                            <h3 class="organization-name">
+                                <span data-text="edu_5_title">Université Lille</span> <br>
+                                <span class="detail-text" data-text="edu_5_date">Septembre 2024 - présent</span>
+                            </h3>
+
+                            <div class="details-section">
+
+                                <div class="detail-label" data-text="edu_localisation_title">Localisation</div>
+                                <div class="detail-text">Lille, France</div>
+
+                                <div class="detail-label" data-text="edu_desc_dep">Département</div>
+                                <div class="detail-text" data-text="edu_5_dep">Faculté d'ingénierie et de management de la santé</div>
+
+                                <div class="detail-label" data-text="edu_desc_job">Poste</div>
+                                <div class="detail-text" data-text="edu_5_job">Étudiant de Master</div>
+                            </div>
+                        </div>
+
+                        <img class="organization-logo" src="assets/img/lille.png" alt="Université de Lille" />
+
+
+                    </div>
+                    <div class="details-section">
+                        <div class="detail-label">Description</div>
+                        <div class="description-text-description" data-text="edu_5_desc">
+                            Master Data Science pour la Santé est le résultat d'une collaboration entre le monde académique et le monde socio-professionnel. Le Master a reçu le soutien de grandes institutions à l'instar de Bayer Healthcare, Soladis, Florimond-Desprez, Genes Diffusion ainsi que d'Eurasanté et le Pôle Nutrition Santé Longévité. L'équipe pédagogique est composée d'enseignants, denseignants-chercheurs de l'Université de Lille (ILIS, Polytech'Lille) et de professionnels des données de santé.
+                        </div>
+                    </div>
+                </a>
+
+                <a href="http://licence-info.univ-lyon1.fr/" class="affiliation-card">
+                    <div class="card-header">
+                        <div class="card-content">
+                            <h3 class="organization-name">
+                                <span data-text="edu_3_title">Université Claude Bernard Lyon 1 </span> <br>
+                                <span class="detail-text" data-text="edu_3_date">Septembre 2021 – Juin 2023</span>
+                            </h3>
+
+                            <div class="details-section">
+                                <div class="detail-label" data-text="edu_localisation_title">Localisation</div>
+                                <div class="detail-text">Lyon, France</div>
+
+                                <div class="detail-label" data-text="edu_desc_dep">Département</div>
+                                <div class="detail-text" data-text="edu_3_dep">Département d'informatique</div>
+
+                                <div class="detail-label" data-text="edu_desc_job">Poste</div>
+                                <div class="detail-text" data-text="edu_3_job">Étudiant de Licence</div>
+                            </div>
+                        </div>
+
+                        <img class="organization-logo" src="assets/img/lyon1.png"/>
+
+
+                    </div>
+                    <div class="details-section">
+                        <div class="detail-label">Description</div>
+                        <div class="description-text-description" data-text="edu_3_desc">
+                            La licence Informatique a pour vocation de dispenser en trois ans une solide formation en informatique. Dans le cadre du portail "Mathématiques-Informatique" de la licence STS, l'offre de formation comprend trois années dont la première forme un socle de base commun aux mentions Mathématiques et Informatique, avec une orientation en deuxième année. La dernière année est completement spécialisée.
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://assp.univ-lyon2.fr/formation/licences-2/licence-miashs" class="affiliation-card">
+                    <div class="card-header">
+                        <div class="card-content">
+                            <h3 class="organization-name" >
+                                <span data-text="edu_2_title">Université Lumière Lyon 2</span> <br>
+                                <span class="detail-text" data-text="edu_2_date">Septembre 2020 – Juin 2021</span>
+                            </h3>
+
+                            <div class="details-section">
+                                <div class="detail-label" data-text="edu_localisation_title">Localisation</div>
+                                <div class="detail-text">Lyon, France</div>
+
+                                <div class="detail-label" data-text="edu_desc_dep">Département</div>
+                                <div class="detail-text" data-text="edu_2_dep">UFR Anthropologie Sociologie Science Politique</div>
+
+                                <div class="detail-label" data-text="edu_desc_job">Poste</div>
+                                <div class="detail-text" data-text="edu_3_job">Étudiant de Licence</div>
+                            </div>
+                        </div>
+
+                        <img class="organization-logo" src="assets/img/lyon2.jpeg"/>
+
+                    </div>
+                    <div class="details-section">
+                        <div class="detail-label">Description</div>
+                        <div class="description-text-description" data-text="edu_2_desc">
+                            La formation MIASHS propose aux étudiants et étudiantes de se former à la pluridisciplinarité en combinant des connaissances théoriques et pratiques en Sciences Humaines et Sociales (SHS) et des enseignements de Mathématiques, Informatique et Statistiques.                        </div>
+                    </div>
+                </a>
+
             </div>
         </section>
 

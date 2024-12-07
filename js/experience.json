@@ -1,0 +1,39 @@
+{
+  "fr": {
+    "title_exp": "Expériences",
+    "exp_1_date": "Mai 2023 - Juillet 2023",
+    "exp_1_title": "CNRS - LIRIS",
+    "exp_1_title_desc": "Laboratoire d'Informatique en Image et Systèmes d'Information",
+    "exp_1_job": "Stagiaire",
+    "exp_2_date": "Mars 2025 - Août 2025",
+    "exp_2_title": "Hospices Civiles de Lyon",
+    "exp_2_title_desc": "Centre National de Référence virus des infections respiratoires",
+    "exp_2_job": "Stagiaire",
+    "exp_localisation_title": "Localisation",
+    "exp_desc_dep": "Département",
+    "exp_desc_job": "Poste",
+    "exp_1_localisation": "Lyon, France",
+    "exp_2_localisation": "Lyon, France",
+    "exp_2_desc": "Intégration et automatisation du traitement des données provenant du réseau de laboratoires privés RELAB et des réseaux d'hopitaux RENAL, pour effectuer des analyses prédictives de surveillance les épidémies de virus respiratoires et détection des nouveaux variants à l'échelle nationale.",
+    "exp_1_desc": "Développement et implémentation de techniques d'apprentissage profond pour la segmentation des tumeurs du sein à partir d'images automatisées d'échographie 3D. Participation au challenge du MICCAI 2023, axé sur la création de méthodes avancées de traitement d'images médicales assistées par ordinateur pour améliorer la détection précoce des anomalies mammaires."
+
+  },
+  "eng": {
+    "title_exp": "Experiences",
+    "exp_1_date": "May 2023 - July 2023",
+    "exp_1_title": "CNRS - LIRIS",
+    "exp_1_title_desc": "Laboratory of Computer Science in Image and Information Systems",
+    "exp_1_job": "Intern",
+    "exp_2_date": "March 2025 - August 2025",
+    "exp_2_title": "Hospices Civils de Lyon",
+    "exp_2_title_desc": "National Reference Center for Respiratory Virus Infections",
+    "exp_2_job": "Intern",
+    "exp_localisation_title": "Location",
+    "exp_desc_dep": "Department",
+    "exp_desc_job": "Position",
+    "exp_1_localisation": "Lyon, France",
+    "exp_2_localisation": "Lyon, France",
+    "exp_2_desc": "Integration and automation of data processing from the RELAB private laboratory network and the RENAL hospital network, to perform predictive analyses for monitoring respiratory virus epidemics and detecting new variants on a national scale.",
+    "exp_1_desc": "Development and implementation of deep learning techniques for breast tumor segmentation from automated 3D ultrasound images. Participation in the MICCAI 2023 challenge, focused on creating advanced computer-assisted medical image processing methods to improve early detection of breast anomalies."
+  }
+}
