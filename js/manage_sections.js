@@ -1,14 +1,12 @@
 
 async function fetchJSON() {
     const currentHash = window.location.hash;
-    console.log(currentHash);
     const sectionName = currentHash.replace('#', '').replace('ID', '');
     const jsonUrl = `js/${sectionName}.json`;
 
     try {
         const response = await fetch(jsonUrl);
         sectionText = await response.json();
-        console.log('fin');
     } catch (error) {
         console.error("Erreur lors du chargement du fichier JSON : ", error);
     }
@@ -41,6 +39,10 @@ async function manageSections() {
     if (currentSection) {
         currentSection.style.display = 'block';
     }
-    console.log(currentHash);
-    setLanguage();
+
+    if (currentHash === '#resumeID') {
+        setLinkPDF();
+    } else {
+        setLanguage();
+    }
 }

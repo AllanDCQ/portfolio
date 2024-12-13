@@ -22,8 +22,6 @@ header {
 }
 
 
-
-
 /* Style for the wab page */
     .style_page {
         background-image: url("../assets/img/background.png");
@@ -41,6 +39,7 @@ header {
         width:25px;
         height: 25px;
         margin-right: 10px;
+        filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg); /* Inverser la couleur du logo  en blanc*/
     }
 
 /* Style for language logos */
@@ -307,7 +306,7 @@ body {
 }
 
 /* .section SECTION
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––  */
 
 .section {
     padding: 50px 0;
@@ -329,8 +328,11 @@ body {
     font-size: 1.3rem;
 }
 
+
+
+
 /* TIMELINE
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .timeline {
     position: relative;
@@ -458,6 +460,18 @@ body {
     font-weight: bold;
     margin-bottom: 8px;
     color: var(--midnight-green);
+}
+
+/* –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+.responsive-embed {
+    display: block;
+    margin: 50px auto;
+    width: 70%; /* Ajustez si nécessaire */
+    aspect-ratio: 0.95 ; /* Maintient le ratio d'aspect A4 */
+    height: auto; /* Automatique en fonction de la largeur */
+    max-width: 100%; /* Assure une bonne adaptabilité sur les petits écrans */
 }
 
 

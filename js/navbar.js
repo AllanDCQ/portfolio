@@ -86,8 +86,7 @@ function createNavbar(idNavbar = "idNavBar", nameParameter, jobParameter, linksP
 
             // Mettre à jour la page active dans la navbar
             updateNavbarActivePage();
-            manageSections()
-            console.log("click");
+            manageSections();
 
             // Naviguer vers la section correspondante
             document.querySelector(activepage).scrollIntoView({ behavior: 'smooth' });

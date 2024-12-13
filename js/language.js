@@ -44,7 +44,17 @@ function createHeaderLangage(idHeader = "idHeader", langageArray) {
         langageButton.addEventListener('click', () => {
             selectedLanguage = langage.code;
             updateNavbarLanguage();
-            setLanguage();
+
+            let currentHash = window.location.hash;
+
+            if (currentHash === '#resumeID') {
+
+                setLinkPDF();
+            } else {
+                setLanguage();
+            }
+
+
 
         });
 
@@ -68,11 +78,22 @@ function createHeaderLangage(idHeader = "idHeader", langageArray) {
 
 
 // Fonction pour changer la langue
-function setLanguage() {
+async function setLanguage() {
+    await fetchJSON();
     // Parcourir tous les éléments avec l'attribut data-i18n
     document.querySelectorAll("[data-text]").forEach((element) => {
         const key = element.getAttribute("data-text");
         element.textContent = sectionText[selectedLanguage][key];
+    });
+}
+
+async function setLinkPDF() {
+    console.log("setLinkPDF");
+    await fetchJSON();
+    // Parcourir tous les éléments avec l'attribut data-i18n
+    document.querySelectorAll("[data-link]").forEach((element) => {
+        const key = element.getAttribute("data-link");
+        element.setAttribute('src', sectionText[selectedLanguage][key]);
     });
 }
 
