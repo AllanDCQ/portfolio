@@ -1,15 +1,20 @@
 
 async function fetchJSON() {
-    const currentHash = window.location.hash;
-    const sectionName = currentHash.replace('#', '').replace('ID', '');
-    const jsonUrl = `js/${sectionName}.json`;
 
-    try {
-        const response = await fetch(jsonUrl);
-        sectionText = await response.json();
-    } catch (error) {
-        console.error("Erreur lors du chargement du fichier JSON : ", error);
+    let jsonUrl = 'js/home.json';
+
+    const currentHash = window.location.hash;
+ 
+    if (currentHash) {
+        const sectionName = currentHash.replace('#', '').replace('ID', '');
+        jsonUrl = `js/${sectionName}.json`;
+        
     }
+
+    const response = await fetch(jsonUrl);
+
+    sectionText = await response.json();
+
 }
 
 /**
