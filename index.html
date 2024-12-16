@@ -15,13 +15,20 @@
 
     <body class="style_page">
         <!-- section Header -->
-        <header class = "bg-dark">
+        <header class = "bg-header">
             <!-- section change the langage or change the contrast -->
             <div id="idHeader">
                 <script src="js/language.js"></script>
                 <script>
                     let selectedLanguage = "fr";
-                    let activepage = "#homeID";
+                     let activepage;
+
+
+                    if (window.location.hash) {
+                        activepage = window.location.hash;
+                    } else {
+                        activepage = "#homeID";
+                    }
 
                     let langage = [
                         {code: "fr", text: "Français", href : "index.html", logo: "assets/img/france.png"},
@@ -393,7 +400,7 @@
                                 <div class="detail-text" data-text="edu_5_dep">Faculté d'ingénierie et de management de la santé</div>
 
                                 <div class="detail-label" data-text="edu_desc_job">Poste</div>
-                                <div class="detail-text" data-text="edu_5_job">Étudiant de Master</div>
+                                <div class="detail-text" data-text="edu_5_title_desc">Étudiant de Master</div>
                             </div>
                         </div>
 
@@ -425,7 +432,7 @@
                                 <div class="detail-text" data-text="edu_3_dep">Département d'informatique</div>
 
                                 <div class="detail-label" data-text="edu_desc_job">Poste</div>
-                                <div class="detail-text" data-text="edu_3_job">Étudiant de Licence</div>
+                                <div class="detail-text" data-text="edu_3_title_desc">Étudiant de Licence</div>
                             </div>
                         </div>
 
@@ -457,7 +464,7 @@
                                 <div class="detail-text" data-text="edu_2_dep">UFR Anthropologie Sociologie Science Politique</div>
 
                                 <div class="detail-label" data-text="edu_desc_job">Poste</div>
-                                <div class="detail-text" data-text="edu_3_job">Étudiant de Licence</div>
+                                <div class="detail-text" data-text="edu_2_title_desc">Étudiant de Licence</div>
                             </div>
                         </div>
 
@@ -476,6 +483,159 @@
 
 
         <!-- section Projects -->
+        <section id="projectsID">
+            <script src="js/projects.js"></script>
+            <div class="projects-container">
+                <div class="projects-background">
+                    <div class="content-wrapper">
+                        <form class="sidebar p-3" aria-label="Filter projects by technology">
+                            <div class="d-flex align-items-center">
+                                <span class="mb-3 title-bar">Code</span>
+                            </div>
+
+                            <label class="tech-item mb-3">
+                                <input type="checkbox" class="visually-hidden" id="Phyton" checked data-tech="Python" />
+                                <span class="tech-checkbox" aria-hidden="true"></span>
+                                <div class="tech-label">
+                                    <img src="assets/img/icons/python_passive.png" alt="" class="tech-icon me-2" role="presentation" />
+                                    <span>Python</span>
+                                </div>
+                            </label>
+
+                            <label class="tech-item mb-3">
+                                <input type="checkbox" class="visually-hidden" id="R" checked data-tech="R" />
+                                <span class="tech-checkbox" aria-hidden="true"></span>
+                                <div class="tech-label">
+                                    <img src="assets/img/icons/r_passive.png" alt="" class="tech-icon me-2" role="presentation" />
+                                    <span>R</span>
+                                </div>
+                            </label>
+
+                            <label class="tech-item mb-3">
+                                <input type="checkbox" class="visually-hidden" id="C++" checked data-tech="C++" />
+                                <span class="tech-checkbox" aria-hidden="true"></span>
+                                <div class="tech-label">
+                                    <img src="assets/img/icons/c_passive.png" alt="" class="tech-icon me-2" role="presentation" />
+                                    <span>C++</span>
+                                </div>
+                            </label>
+
+                            <label class="tech-item mb-3">
+                                <input type="checkbox" class="visually-hidden" id="Java" checked data-tech="Java" />
+                                <span class="tech-checkbox" aria-hidden="true"></span>
+                                <div class="tech-label">
+                                    <img src="assets/img/icons/java_passive.png" alt="" class="tech-icon me-2" role="presentation" />
+                                    <span>Java</span>
+                                </div>
+                            </label>
+
+                            <label class="tech-item mb-3">
+                                <input type="checkbox" class="visually-hidden" id="JavaScript" checked data-tech="JavaScript" />
+                                <span class="tech-checkbox" aria-hidden="true"></span>
+                                <div class="tech-label">
+                                    <img src="assets/img/icons/javascript_passive.png" alt="" class="tech-icon me-2" role="presentation" />
+                                    <span>JavaScript</span>
+                                </div>
+                            </label>
+
+                            <label class="tech-item mb-3">
+                                <input type="checkbox" class="visually-hidden" id="html" data-tech="HTML" />
+                                <span class="tech-checkbox" aria-hidden="true"></span>
+                                <div class="tech-label">
+                                    <img src="assets/img/icons/html_passive.png" alt="" class="tech-icon me-2" role="presentation" />
+                                    <span>HTML</span>
+                                </div>
+                            </label>
+
+                            <label class="tech-item mb-3">
+                                <input type="checkbox" class="visually-hidden" id="Pytorch" data-tech="Pytorch" />
+                                <span class="tech-checkbox" aria-hidden="true"></span>
+                                <div class="tech-label">
+                                    <img src="assets/img/icons/pytorch_passive.png" alt="" class="tech-icon me-2" role="presentation" />
+                                    <span>Pytorch</span>
+                                </div>
+                            </label>
+
+                            <label class="tech-item mb-3">
+                                <input type="checkbox" class="visually-hidden" id="Tensorflow" data-tech="Tensorflow" />
+                                <span class="tech-checkbox" aria-hidden="true"></span>
+                                <div class="tech-label">
+                                    <img src="assets/img/icons/tensorf_passive.png" alt="" class="tech-icon me-2" role="presentation" />
+                                    <span>Tensorflow</span>
+                                </div>
+                            </label>
+
+                            <div class="d-flex align-items-center separator">
+                                <span class="mb-3 title-bar">Themes</span>
+                            </div>
+
+                            <label class="tech-item mb-3">
+                                <input type="checkbox" class="visually-hidden" id="Segmentation" data-tech="Segmentation" />
+                                <span class="tech-checkbox" aria-hidden="true"></span>
+                                <div class="tech-label">
+                                    <span>Segmentation</span>
+                                </div>
+                            </label>
+
+                            <label class="tech-item mb-3">
+                                <input type="checkbox" class="visually-hidden" id="Deep Learning" data-tech="Deep Learning" />
+                                <span class="tech-checkbox" aria-hidden="true"></span>
+                                <div class="tech-label">
+                                    <span>Deep Learning</span>
+                                </div>
+                            </label>
+
+                            <label class="tech-item mb-3">
+                                <input type="checkbox" class="visually-hidden" id="Medical Imaging" data-tech="Medical Imaging" />
+                                <span class="tech-checkbox" aria-hidden="true"></span>
+                                <div class="tech-label">
+                                    <span>Medical Imaging</span>
+                                </div>
+                            </label>
+
+                            <label class="tech-item mb-3">
+                                <input type="checkbox" class="visually-hidden" id=Mathematics" data-tech="Mathematics" />
+                                <span class="tech-checkbox" aria-hidden="true"></span>
+                                <div class="tech-label">
+                                    <span>Mathematics</span>
+                                </div>
+                            </label>
+
+                            <label class="tech-item mb-3">
+                                <input type="checkbox" class="visually-hidden" id="Data management" data-tech="Data management" />
+                                <span class="tech-checkbox" aria-hidden="true"></span>
+                                <div class="tech-label">
+                                    <span>Data management</span>
+                                </div>
+                            </label>
+
+                            <label class="tech-item mb-3">
+                                <input type="checkbox" class="visually-hidden" id=Game" data-tech="Game" />
+                                <span class="tech-checkbox" aria-hidden="true"></span>
+                                <div class="tech-label">
+                                    <span>Game</span>
+                                </div>
+                            </label>
+
+                            <label class="tech-item mb-3">
+                                <input type="checkbox" class="visually-hidden" id="Mini Projects" data-tech="Mini Projects" />
+                                <span class="tech-checkbox" aria-hidden="true"></span>
+                                <div class="tech-label">
+                                    <span>Mini Projects</span>
+                                </div>
+                            </label>
+                        </form>
+
+
+
+
+                        <div id="projects-grid" class="projects-grid" role="list" aria-label="Projects list"></div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
 
 
 
@@ -486,7 +646,7 @@
 
 
         <!-- section Footer -->
-        <footer class="bg-dark text-white py-4">
+        <footer class="bg-header text-white py-4 footer">
             <div class="container">
                 <div class="row text-center">
                     <!-- Bloc 1 : GitHub -->

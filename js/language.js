@@ -29,7 +29,7 @@ function createHeaderLangage(idHeader = "idHeader", langageArray) {
     navbar.className = 'navbar'; // Classe Bootstrap pour un navbar
     navbar.classList.add('navbar-expand-sm'); // Récursivité et taille du navbar
     navbar.classList.add('navbar-dark'); // Theme dark
-    navbar.classList.add('bg-dark'); // Couleur de fond dark
+    navbar.classList.add('bg-header'); // Couleur de fond dark
     navbar.classList.add('sticky-top'); // Navbar collante en haut de la page
 
     const div = document.createElement('div');
@@ -52,6 +52,11 @@ function createHeaderLangage(idHeader = "idHeader", langageArray) {
                 setLinkPDF();
             } else {
                 setLanguage();
+            }
+
+            if (currentHash === '#projectsID') {
+                renderProjects();
+                filterProjects();
             }
 
 

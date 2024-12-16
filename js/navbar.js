@@ -26,7 +26,7 @@ function createNavbar(idNavbar = "idNavBar", nameParameter, jobParameter, linksP
     navbar.className = 'navbar'; // Ajout de la class barre de navigation Bootstrap
     navbar.classList.add('navbar-expand-xl'); // Récursivité et taille du navbar
     navbar.classList.add('navbar-dark'); // Theme dark
-    navbar.classList.add('bg-dark'); // Couleur de fond dark
+    navbar.classList.add('bg-header'); // Couleur de fond dark
     navbar.classList.add('sticky-top'); // Navbar collante en haut de la page
 
     // Création du logo à gauche :

@@ -12,6 +12,7 @@ html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Assurez-vous que l'horizontale est aussi bien gérée */
+    background-size: cover;
 }
 header {
     position: relative;
@@ -48,6 +49,11 @@ header {
         height: 17px;
     }
 
+    .bg-header {
+        background-color: #1e2d3d;
+
+    }
+
 
 
 
@@ -68,7 +74,7 @@ header {
     margin-bottom: 10vw; /* Utilisation de `vw` pour rendre le margin adaptatif */
 }
 .profile-header {
-    color: #fff;
+    color: #efefef;
     font: 600 clamp(2rem, 5vw, 3.125rem)/1.2 Montserrat, sans-serif; /* Clamp pour ajuster la taille */
     text-align: left;
     margin-left: clamp(2rem, 10vw, 21.875rem); /* Rendre le margin adaptatif */
@@ -78,7 +84,7 @@ header {
     align-self: end;
     z-index: 10;
     width: 70%; /* Utiliser un pourcentage au lieu d'une largeur fixe */
-    color: #fff;
+    color: #efefef;
     text-align: right;
     font: 300 clamp(2.5rem, 6vw, 3.625rem)/1.3 Montserrat, sans-serif;
     margin-right: clamp(1rem, 5vw, 15.625rem);
@@ -101,14 +107,14 @@ header {
 }
 
 .section-title {
-    color: #fff;
+    color: #efefef;
     margin: clamp(20px, 10vw, 142px) 0 clamp(10px, 2vw, 29px);
     font: 600 clamp(1.5rem, 4vw, 2.5rem)/1.6 Montserrat, sans-serif;
     margin-left: clamp(-1200px, -60vw, -400px); /* Adapte la marge selon l'écran */
 }
 
 .page-title {
-    color: #fff;
+    color: #efefef;
     font: 600 clamp(1.5rem, 4vw, 2.5rem)/1.6 Montserrat, sans-serif;
     text-align: center;
     padding-top: 150px;
@@ -117,7 +123,7 @@ header {
 
 .affiliation-card {
     border-radius: 40px;
-    background-color: rgba(36, 36, 39, 1);
+    background-color: #1e2d3d;
     width: 90%;
     max-width: clamp(300px, 80%, 1200px);
     padding: clamp(20px, 5vw, 44px);
@@ -132,7 +138,7 @@ header {
 /* Animation de flottement au survol */
 .affiliation-card:hover {
     transform: translateY(-20px) translateX(5px); /* Déplacement vers le haut et légèrement à droite */
-    background-color: #535353cc; /* Couleur de fond plus claire */
+    background-color: #344250; /* Couleur de fond plus claire */
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4); /* Ombre plus marquée */
 }
 
@@ -147,12 +153,12 @@ header {
 }
 
 .organization-name {
-    color: #fff;
+    color: #efefef;
     font: 600 clamp(1.5rem, 4vw, 2.5rem)/0.7  Montserrat, sans-serif;
 }
 
 .date-name {
-    color: #535353cc;
+    color: #c5c5c5;
     font: 400 clamp(1rem, 3vw, 0.4rem)/1 Montserrat, sans-serif;
 }
 
@@ -162,7 +168,7 @@ header {
 
 .detail-label {
     font: 400 clamp(1rem, 3vw, 1.75rem) Montserrat, sans-serif;
-    color: #fff;
+    color: #efefef;
 }
 
 .detail-text {
@@ -266,8 +272,8 @@ header {
 
 
 :root {
-    --white: #fff;
-    --black: #323135;
+    --white: #1e2d3d;
+    --black: #efefef;
     --crystal: #a8dadd;
     --columbia-blue: rgba(36, 36, 39, 1);
     --midnight-green: #c5c5c5;
@@ -384,7 +390,7 @@ body {
     list-style-type: none;
     width: 260px;
     height: 5px;
-    background: var(--white);
+    background: #344250;
     scroll-snap-align: start;
 }
 
@@ -475,3 +481,256 @@ body {
 }
 
 
+/* ––––––––––––––––––––––––––––––––––––  Projects  ––––––––––––––––––––––––––––––––––––––– */
+
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: center;
+    padding-right: clamp(20px, 5vw, 70px);
+    padding-left: clamp(20px, 5vw, 70px);
+}
+
+.projects-background {
+    border-radius: 8px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 52px 4px 52px 22px;
+
+}
+
+.content-wrapper {
+    display: flex;
+    margin-top: 9px;
+    width: 100%;
+    align-items: start;
+    gap: 40px 100px;
+    min-height: 1000px; /* Add minimum height */
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 100px;
+}
+
+.title-bar{
+    display: flex;
+    color: #607b96;
+    font: 300 20px 'Fira Code', sans-serif;
+    align-items: center;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-left: -10px;
+
+}
+
+
+
+.icon {
+    aspect-ratio: 1.5;
+    object-fit: contain;
+    width: 9px;
+    margin: auto 0;
+}
+
+.tech-item {
+    display: flex;
+    margin-top: 17px;
+    min-height: 24px;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.separator{
+    margin-top: 50px;
+}
+
+
+.tech-checkbox {
+    border-radius: 2px;
+    background-color: #011627;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #607b96;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+
+.tech-label {
+    display: flex;
+    gap: 10px;
+    color: #607b96;
+    font: 300 16px 'Fira Code', sans-serif;
+    align-items: center;
+}
+
+.tech-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    width: 24px;
+}
+
+.tech-label.active {
+    color: #607b96;
+    font-weight: bold;
+}
+
+
+
+
+.projects-grid {
+    margin-top: 50px;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    border-radius: 15px;
+    background-color: #1e2d3d;
+    border: 1px solid #011221;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    background-color: #344250; /* Couleur de fond plus claire */
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4); /* Ombre plus marquée */
+}
+
+.project-title {
+    color: #efefef;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Fira Code', sans-serif;
+    margin: 0;
+    padding: 20px 20px 0;
+}
+
+.project-subtitle {
+    color: #607b96;
+    font-weight: 450;
+    display: inline;
+}
+
+.project-image {
+    aspect-ratio: 2.55;
+    object-fit: cover;
+    width: 95%;
+    border-radius: 15px 15px 15px 15px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.project-content {
+    padding: 24px 31px 32px;
+}
+
+.project-description {
+    color: #607b96;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 450;
+    margin: 0 0 22px;
+}
+
+.view-project {
+    border-radius: 8px;
+    background-color: #607b96;
+    padding: 10px 14px;
+    color: #efefef;
+    font-size: 14px;
+    text-align: left;
+    cursor: pointer;
+    border: none;
+    width: 30%;
+    transition: background-color 0.2s;
+}
+
+.view-project:hover,
+.view-project:focus {
+    background-color: #263b50;
+    outline: none;
+}
+
+.view-project:focus-visible {
+    outline: 2px solid #efefef;
+    outline-offset: 2px;
+}
+
+.pagination {
+    display: flex;
+    margin-top: 31px;
+    gap: 3px;
+    align-self: flex-end;
+}
+
+.pagination-line {
+    width: 1px;
+    background-color: #607b96;
+}
+
+.pagination-dot {
+    width: 18px;
+    height: 7px;
+    background-color: #607b96;
+}
+
+@media (max-width: 991px) {
+    .projects-container {
+        padding: 20px;
+    }
+
+    .projects-background {
+        padding: 30px 20px;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        margin-top: 50px;
+    }
+
+    .project-content {
+        padding: 24px 20px;
+    }
+
+
+    .pagination {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-card,
+    .view-project {
+        transition: none;
+    }
+}

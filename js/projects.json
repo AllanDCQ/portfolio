@@ -1,0 +1,226 @@
+{
+  "eng": {
+    "projects": [
+      {
+        "id": 1,
+        "title": "TDSC-ABUS",
+        "subtitle": "_internship_cnrs",
+        "image": "assets/img/proj_10.png",
+        "description": "The aim of this internship was to develop a segmentation model for 3D breast ultrasound images. The model was trained on the TDSC-2023 dataset, which is a dataset of 3D breast ultrasound images annotated by radiologists. The model was evaluated on the TDSC-2023 dataset and compared to other segmentation models.",
+        "technologies": ["Python","Pytorch","Segmentation","Medical Imaging","Deep Learning"],
+        "link": "https://www.researchgate.net/publication/375763057_Segmentation_on_Automated_3D_Breast_Ultrasound_TDSC-2023_dataset_-_Internship_Report"
+      },
+      {
+        "id": 2,
+        "title": "LIFPRO",
+        "subtitle": "_end-year-project",
+        "image": "assets/img/proj_1.png",
+        "description": "Brain imaging refers to the use of various techniques to create images of the brain and its structures. These techniques can include CT scans, MRI, PET, and others. Deep learning is a subfield of machine learning that involves the use of artificial neural networks to learn and recognize patterns in data. In the context of brain imaging, deep learning can be used to analyze and interpret brain images, potentially aiding in the diagnosis of brain disorders and diseases.",
+        "technologies": ["Python", "Tensorflow","Deep Learning", "Medical Imaging"],
+        "link": "https://github.com/enzoephrem/LIFPRO"
+      },
+      {
+        "id": 3,
+        "title": "ACP",
+        "subtitle": "_statistics",
+        "image": "assets/img/proj_9.png",
+        "description": "The aim of the project was to put into practice the concepts of Principal Component Analysis (PCA) as taught in class. This analysis enabled us to better understand the characteristics of the different car models and to group them according to their features.",
+        "technologies": ["R","Mathematics"],
+        "link": "assets/M1_DSS_ACP_DECLERCQ.pdf"
+      },
+      {
+        "id": 4,
+        "title": "Data management",
+        "subtitle": "_r_eval",
+        "image": "assets/img/proj_11.png",
+        "description": "The aim of this project was to put into practice the concepts of data management and analyse posts from Reddit.",
+        "technologies": ["R","Data management"],
+        "link": "assets/M1_DSS_R.pdf"
+      },
+      {
+        "id": 5,
+        "title": "Gyromite",
+        "subtitle": "_java_game",
+        "image": "assets/img/proj_3.jpeg",
+        "description": "Gyromite is a video game released in 1985 for the Nintendo Entertainment System, designed for use with the Robotic Operating Buddy. The game is a puzzle-platformer in which the player controls Professor Hector, who must use his assistant, a robot named R.O.B., to move red and blue pillars blocking his path.",
+        "technologies": ["Java","Game"],
+        "link": "https://github.com/AllanDCQ/Gyromite"
+      },
+      {
+        "id": 6,
+        "title": "LIFAP4",
+        "subtitle": "_game_c++",
+        "image": "assets/img/proj_12.png",
+        "description": "Tower Defense type game, it consists of defending the areas where our buildings are located, while protecting ourselves from the enemy and preventing them from reaching our towers by choosing a particular route.",
+        "technologies": ["C++","Game"],
+        "link": "https://github.com/tomdcht/ProjetLIFAP4"
+      },
+      {
+        "id": 7,
+        "title": "Probability",
+        "subtitle": "_tp_probability",
+        "image": "assets/img/proj_4.png",
+        "description": "This project was about simulating probability laws using the Python language. We had to simulate the law of large numbers, the central limit theorem ...",
+        "technologies": ["Python","Latex","Mathematics"],
+        "link": "https://github.com/AllanDCQ/Simulation-de-lois-de-probabilit-s"
+      },
+      {
+        "id": 8,
+        "title": "LIFAP5",
+        "subtitle": "_web_pokemon",
+        "image": "assets/img/proj_7.png",
+        "description": " Manage pokemons: consult the pokemon catalog (a.k.a. Pokedex), choose the pokemons you want to place in your deck and take on an opponent in a pokemon battle. ",
+        "technologies": ["JavaScript","HTML","Game"],
+        "link": "https://github.com/AllanDCQ/LIFAP5_Project"
+      },
+      {
+        "id": 9,
+        "title": "LIFSTAT",
+        "subtitle": "_statistics",
+        "image": "assets/img/proj_8.png",
+        "description": "This project is about statistics and data analysis. We had to use the R language to analyze a dataset and make a report.",
+        "technologies": ["R","Mathematics"],
+        "link": "https://github.com/AllanDCQ/Statistiques_Project"
+      },
+      {
+        "id": 10,
+        "title": "LIFGRAPHIQUE",
+        "subtitle": "_animation",
+        "image": "assets/img/proj_6.png",
+        "description": "Using the C++ language, we had to create cinematic animations with the help of the lifgfx library.",
+        "technologies": ["C++","Game"],
+        "link": "https://github.com/AllanDCQ/LIFGRAPHIQUE_Project"
+      },
+      {
+        "id": 11,
+        "title": "IA Projects",
+        "subtitle": "_ia_mini_projects",
+        "image": "assets/img/proj_no.jpg",
+        "description": "Projects carried out while learning python and AI (Deep Learning)",
+        "technologies": ["Python","Pytorch","Deep Learning","Mini Projects"],
+        "link": "https://github.com/AllanDCQ/IA_mini_projects"
+      },
+      {
+        "id": 12,
+        "title": "Projects Python",
+        "subtitle": "_python_mini_projects",
+        "image": "assets/img/proj_no.jpg",
+        "description": "Projects I completed while learning python.",
+        "technologies": ["Python","Mini Projects"],
+        "link": "https://github.com/AllanDCQ/python_mini_projects"
+      }
+    ]
+  },
+  "fr": {
+    "projects": [
+      {
+        "id": 1,
+        "title": "TDSC-ABUS",
+        "subtitle": "_stage_cnrs",
+        "image": "assets/img/proj_10.png",
+        "description": "L'objectif de ce stage était de développer un modèle de segmentation pour des images d'échographie mammaire 3D. Le modèle a été entraîné sur le jeu de données TDSC-2023, qui est un jeu de données d'images d'échographie mammaire 3D annotées par des radiologues. Le modèle a été évalué sur le jeu de données TDSC-2023 et comparé à d'autres modèles de segmentation.",
+        "technologies": ["Python","Pytorch","Segmentation","Medical Imaging","Deep Learning"],
+        "link": "https://www.researchgate.net/publication/375763057_Segmentation_on_Automated_3D_Breast_Ultrasound_TDSC-2023_dataset_-_Internship_Report"
+      },
+      {
+        "id": 2,
+        "title": "LIFPRO",
+        "subtitle": "_projet_fin_d'année",
+        "image": "assets/img/proj_1.png",
+        "description": "L'imagerie cérébrale fait référence à l'utilisation de diverses techniques pour créer des images du cerveau et de ses structures. Ces techniques peuvent inclure des scanners CT, IRM, TEP et autres. L'apprentissage profond est un sous-domaine de l'apprentissage automatique qui implique l'utilisation de réseaux neuronaux artificiels pour apprendre et reconnaître des motifs dans les données. Dans le contexte de l'imagerie cérébrale, l'apprentissage profond peut être utilisé pour analyser et interpréter des images cérébrales, aidant potentiellement au diagnostic des troubles et maladies cérébrales.",
+        "technologies": ["Python", "Tensorflow","Deep Learning", "Medical Imaging"],
+        "link": "https://github.com/enzoephrem/LIFPRO"
+      },
+      {
+        "id": 3,
+        "title": "ACP",
+        "subtitle": "_statistiques",
+        "image": "assets/img/proj_9.png",
+        "description": "L'objectif du projet était de mettre en pratique les concepts de l'Analyse en Composantes Principales (ACP) enseignés en cours. Cette analyse nous a permis de mieux comprendre les caractéristiques des différents modèles de voitures et de les regrouper selon leurs caractéristiques.",
+        "technologies": ["R","Mathematics"],
+        "link": "assets/M1_DSS_ACP_DECLERCQ.pdf"
+      },
+      {
+        "id": 4,
+        "title": "Gestion des données",
+        "subtitle": "_r_eval",
+        "image": "assets/img/proj_11.png",
+        "description": "L'objectif de ce projet était de mettre en pratique les concepts de gestion des données et d'analyser les posts de Reddit.",
+        "technologies": ["R","Data management"],
+        "link": "assets/M1_DSS_R.pdf"
+      },
+      {
+        "id": 5,
+        "title": "Gyromite",
+        "subtitle": "_jeu_java",
+        "image": "assets/img/proj_3.jpeg",
+        "description": "Gyromite est un jeu vidéo sorti en 1985 pour la Nintendo Entertainment System, conçu pour être utilisé avec le Robotic Operating Buddy. Le jeu est un puzzle-plateforme dans lequel le joueur contrôle le professeur Hector, qui doit utiliser son assistant, un robot nommé R.O.B., pour déplacer les piliers rouges et bleus bloquant son chemin.",
+        "technologies": ["Java","Game"],
+        "link": "https://github.com/AllanDCQ/Gyromite"
+      },
+      {
+        "id": 6,
+        "title": "LIFAP4",
+        "subtitle": "_jeu_c++",
+        "image": "assets/img/proj_12.png",
+        "description": "Jeu de type “Tower Défense”, il consiste à défendre les zones dans lesquelles se trouvent nos bâtiments, tout en se protégeant de l’ennemi et en l'empêcher d’accéder à nos tours et choisissant un itinéraire particulier.",
+        "technologies": ["C++","Game"],
+        "link": "https://github.com/tomdcht/ProjetLIFAP4"
+      },
+      {
+        "id": 7,
+        "title": "Probabilité",
+        "subtitle": "_tp_probabilité",
+        "image": "assets/img/proj_4.png",
+        "description": "Ce projet consistait à simuler des lois de probabilité en utilisant le langage Python. Nous avons dû simuler la loi des grands nombres, le théorème central limite ...",
+        "technologies": ["Python","Mathematics"],
+        "link": "https://github.com/AllanDCQ/Simulation-de-lois-de-probabilit-s"
+      },
+      {
+        "id": 8,
+        "title": "LIFAP5",
+        "subtitle": "_web_pokemon",
+        "image": "assets/img/proj_7.png",
+        "description": "Gérer les pokémons : consulter le catalogue de pokémons (a.k.a. Pokedex), choisir les pokémons que vous souhaitez placer dans votre deck et affronter un adversaire dans un combat de pokémons.",
+        "technologies": ["JavaScript","HTML","Game"],
+        "link": "https://github.com/AllanDCQ/LIFAP5_Project"
+      },
+      {
+        "id": 9,
+        "title": "LIFSTAT",
+        "subtitle": "_statistiques",
+        "image": "assets/img/proj_8.png",
+        "description": "Ce projet porte sur les statistiques et l'analyse de données. Nous avons dû utiliser le langage R pour analyser un jeu de données et rédiger un rapport.",
+        "technologies": ["R","Mathematics"],
+        "link": "https://github.com/AllanDCQ/Statistiques_Project"
+      },
+      {
+        "id": 10,
+        "title": "LIFGRAPHIQUE",
+        "subtitle": "_animation",
+        "image": "assets/img/proj_6.png",
+        "description": "En utilisant le langage C++, nous avons dû créer des animations cinématiques avec l'aide de la bibliothèque lifgfx.",
+        "technologies": ["C++","Game"],
+        "link": "https://github.com/AllanDCQ/LIFGRAPHIQUE_Project"
+      },
+      {
+        "id": 11,
+        "title": "Projets IA",
+        "subtitle": "_mini_projets_ia",
+        "image": "assets/img/proj_no.jpg",
+        "description": "Projets réalisés en apprenant le python et l'IA (Deep Learning)",
+        "technologies": ["Python","Pytorch","Deep Learning","Mini Projects"],
+        "link": "https://github.com/AllanDCQ/IA_mini_projects"
+      },
+      {
+        "id": 12,
+        "title": "Projets Python",
+        "subtitle": "_mini_projets_python",
+        "image": "assets/img/proj_no.jpg",
+        "description": "Projets que j'ai réalisés en apprenant le python.",
+        "technologies": ["Python","Mini Projects"],
+        "link": "https://github.com/AllanDCQ/python_mini_projects"
+      }
+    ]
+  }
+}
